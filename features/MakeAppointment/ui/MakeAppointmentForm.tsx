@@ -1,7 +1,7 @@
 import "../style.scss";
 
 export const MakeAppointmentForm = () => {
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: any) => {
         e.preventDefault();
     }
 

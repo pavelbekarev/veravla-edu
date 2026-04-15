@@ -4,7 +4,6 @@ import { useRef, useState } from "react";
 import "../style.scss";
 import { Course } from "./Course";
 import ShowCourseBar from "@/features/ShowCourseBar";
-import { CSSTransition } from 'react-transition-group';
 import { MakeAppointmentButton, MakeAppointmentForm } from "@/features/MakeAppointment";
 import ModalWrapper from "@/shared/ui/ModalWrapper";
 import { useModal } from "@/shared/lib/useModal";

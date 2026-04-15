@@ -5,7 +5,7 @@ export const ShowMoreButton = (
     { text, onClick, extraClasses }: 
     { text: string, onClick: () => void, extraClasses?: string[] }
 ) => {
-    const classes = [extraClasses, 'showMoreBtn']
+    const classes = [...(extraClasses || []), 'makeAppointment'];
 
     return (
         <Button 
