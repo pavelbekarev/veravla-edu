@@ -1,0 +1,94 @@
+.ourCourse {
+  position: relative;
+  min-height: 100vh;
+  padding: 7rem 0;
+  height: 100%;
+
+  @media (max-width: 500px) {
+    min-height: 110vh;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../../public/assets/ourCourse__bg.png") no-repeat;
+    background-position: right;
+    mix-blend-mode: lighten;
+    pointer-events: none;
+
+    @media (max-width: 1300px) {
+      background-position: bottom right;
+      width: 70%;
+      left: auto;
+      top: auto;
+      bottom: 10%;
+      right: 0;
+      background-size: contain;
+    }
+
+    @media (max-width: 500px) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-family: "Font-Medium";
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 120%;
+
+    &--accent {
+      color: var(--accentColor);
+    }
+  }
+
+  &__itemsContent {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 4.5rem;
+  }
+
+  &__item {
+    position: relative;
+    width: 60%;
+    font-size: 2rem;
+    color: #fff;
+    padding-left: 7rem;
+
+    @media (max-width: 1000px) {
+      width: 100%;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4.5rem;
+      height: 4.5rem;
+      background: url("../../public/assets/marker2.svg") no-repeat;
+      background-size: contain;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 1.75rem;
+    }
+  }
+
+  &__makeAppointment {
+    margin-top: 15rem;
+
+    @media (max-width: 1000px) {
+      position: absolute;
+      top: auto;
+      bottom: 5%;
+      width: 90%;
+    }
+  }
+}

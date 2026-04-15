@@ -1,0 +1,130 @@
+.footer {
+  position: relative;
+  min-height: 30vh;
+  padding: 8.5rem 0;
+
+  &__text {
+    font-size: 1.25rem;
+    font-family: "Font-Demi";
+    color: #747d81;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+
+    @media (max-width: 870px) {
+      flex-flow: column;
+      gap: 2rem;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    gap: 4rem;
+
+    @media (max-width: 870px) {
+      align-items: flex-start;
+    }
+
+    &-item {
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    &-text {
+      font-family: "Font-Medium";
+      font-size: 2.25rem;
+      color: #fff;
+      text-decoration: none;
+
+      &--accent {
+        color: #4abcec;
+      }
+
+      &--email {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__contactsContent {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5.5rem;
+
+    @media (max-width: 530px) {
+      flex-flow: column-reverse;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+  }
+
+  &__socialsLinks {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 2rem;
+  }
+
+  &__copyright {
+    position: relative;
+    margin-top: 8.5rem;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 40%;
+      height: 1px;
+      background: rgba(0, 224, 255, 0.2);
+
+      @media (max-width: 540px) {
+        display: none;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 40%;
+      height: 1px;
+      background: rgba(0, 224, 255, 0.2);
+
+      @media (max-width: 540px) {
+        display: none;
+      }
+    }
+
+    &-text {
+      font-size: 2rem;
+      color: #fff;
+
+      @media (max-width: 540px) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &__glideUp {
+    left: auto !important;
+    right: 3%;
+  }
+}

@@ -1,0 +1,170 @@
+@keyframes boxShadowFly {
+  0% {
+    -webkit-box-shadow: 0px 7px 20px -7px rgba(0, 224, 255, 1);
+    -moz-box-shadow: 0px 7px 20px -7px rgba(0, 224, 255, 1);
+    box-shadow: 0px 7px 20px -7px rgba(0, 224, 255, 1);
+  }
+
+  50% {
+    -webkit-box-shadow: 0px 3px 20px -14px rgba(0, 224, 255, 0.5);
+    -moz-box-shadow: 0px 3px 20px -14px rgba(0, 224, 255, 0.5);
+    box-shadow: 0px 3px 20px -14px rgba(0, 224, 255, 0.5);
+  }
+
+  100% {
+    -webkit-box-shadow: 0px 7px 20px -7px rgba(0, 224, 255, 1);
+    -moz-box-shadow: 0px 7px 20px -7px rgba(0, 224, 255, 1);
+    box-shadow: 0px 7px 20px -7px rgba(0, 224, 255, 1);
+  }
+}
+
+.makeAppointment {
+  background: linear-gradient(
+    180deg,
+    rgba(3, 225, 255, 0.6),
+    rgb(19, 205, 194) 100%
+  );
+
+  border: none;
+  border-radius: 1rem;
+  outline: none;
+  padding: 2.5rem 1.5rem;
+
+  font-size: 1.5rem;
+  letter-spacing: 25%;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Font-Bold";
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    -webkit-box-shadow: 0px 7px 20px -7px rgba(0, 224, 255, 1);
+    -moz-box-shadow: 0px 7px 20px -7px rgba(0, 224, 255, 1);
+    box-shadow: 0px 7px 20px -7px rgba(0, 224, 255, 1);
+  }
+}
+
+.makeAppointmentAside {
+  display: inline-flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  &__imgWrapper {
+    max-width: 12.5rem;
+    max-height: 12.5rem;
+  }
+
+  &__img {
+    background: linear-gradient(
+      180deg,
+      rgba(3, 225, 255, 0.6),
+      rgb(19, 205, 194) 100%
+    );
+    border-radius: 25rem;
+    padding: 3rem;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      -webkit-box-shadow: 0px 7px 20px -7px rgba(0, 224, 255, 1);
+      -moz-box-shadow: 0px 7px 20px -7px rgba(0, 224, 255, 1);
+      box-shadow: 0px 7px 20px -7px rgba(0, 224, 255, 1);
+    }
+  }
+
+  &__text {
+    color: #00e0ff;
+    font-family: "Font-Demi";
+    font-size: 1.25rem;
+
+    &--rotate {
+      margin-top: 15rem;
+      transform: rotate(-90deg);
+      letter-spacing: 36%;
+    }
+
+    @media (max-width: 1520px) {
+      display: none;
+    }
+  }
+}
+
+.makeAppointmentForm {
+  width: 100%;
+  height: 100%;
+  &__title {
+    font-family: "Font-Medium";
+    font-size: 2.75rem;
+    text-transform: uppercase;
+
+    &--accent {
+      color: #4abcec;
+    }
+  }
+
+  &__itemsContent {
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+    margin-top: 5rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+
+    &-input {
+      padding: 2rem 2.5rem;
+      border-radius: 1rem;
+      border: none;
+      outline: none;
+    }
+  }
+
+  &__submitBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5rem;
+    padding: 2rem 2.5rem;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    background: -webkit-linear-gradient(
+      180deg,
+      rgba(3, 225, 255, 0.66),
+      rgb(19, 205, 194) 100%
+    );
+    background: -moz-linear-gradient(
+      180deg,
+      rgba(3, 225, 255, 0.66),
+      rgb(19, 205, 194) 100%
+    );
+    background: linear-gradient(
+      180deg,
+      rgba(3, 225, 255, 0.66),
+      rgb(19, 205, 194) 100%
+    );
+
+    color: #fff;
+    font-family: "Font-Bold";
+    font-size: 1.5rem;
+    letter-spacing: 25%;
+    text-transform: uppercase;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      -webkit-box-shadow: 0px 7px 20px -7px rgba(0, 224, 255, 1);
+      -moz-box-shadow: 0px 7px 20px -7px rgba(0, 224, 255, 1);
+      box-shadow: 0px 7px 20px -7px rgba(0, 224, 255, 1);
+    }
+  }
+}

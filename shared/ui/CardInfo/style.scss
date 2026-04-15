@@ -1,0 +1,26 @@
+.experience-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Font-Medium";
+  font-size: 1.8rem;
+  color: #fff;
+
+  &__label {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  &__dots {
+    flex: 1;
+    border-bottom: 2px dotted rgba(255, 255, 255, 0.3);
+    height: 1px;
+    margin: 0 0.5rem;
+  }
+
+  &__value {
+    flex-shrink: 0;
+    white-space: nowrap;
+    color: #4abcec; // если нужно выделить значение
+  }
+}

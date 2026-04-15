@@ -1,0 +1,30 @@
+.vacancies {
+  position: relative;
+  min-height: 100vh;
+  padding: 12.5rem 0;
+
+  &__head {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+
+  &__title {
+    color: #fff;
+    font-family: "Font-Medium";
+    text-transform: uppercase;
+  }
+
+  &__showMoreBtn {
+    @media (max-width: 540px) {
+      position: absolute;
+      bottom: 5%;
+      width: 90%;
+      max-width: 100%;
+    }
+  }
+
+  &__itemsContent {
+    margin-top: 15rem;
+  }
+}

@@ -1,0 +1,19 @@
+.showMoreBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  background: transparent;
+  border: 1px solid #00e0ff;
+  border-radius: 1rem;
+  outline: none;
+  max-width: 26rem;
+  width: 100%;
+
+  color: #4abcec;
+  text-transform: uppercase;
+  font-family: "Font-Bold";
+  font-size: 1.5rem;
+  letter-spacing: 25%;
+  cursor: pointer;
+}
