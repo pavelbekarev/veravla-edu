@@ -2,10 +2,16 @@
 
 import Button from "@/shared/ui/Button";
 import "../style.scss";
-import { useMakeAppointment } from "../model/useMakeAppointment";
 
-export const MakeAppointmentButton = ({ onClickCallback, extraClasses }: { onClickCallback?: () => void, extraClasses?: string[] }) => {
-    const classes = [extraClasses, 'makeAppointment'];
+export const MakeAppointmentButton = ({ 
+    onClickCallback, 
+    extraClasses 
+}: { 
+    onClickCallback?: () => void, 
+    extraClasses?: string[] 
+}) => {
+    // Фильтруем undefined и объединяем массивы
+    const classes = [...(extraClasses || []), 'makeAppointment'];
 
     return (
         <Button 
