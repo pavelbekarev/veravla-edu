@@ -10,10 +10,9 @@ export async function getAds() {
     const response = await fetch(
       `${process.env.WP_API}/wp-json/wp/v2/announcements`,
       {
-        next: { tags: ["ads"] },
+        next: { revalidate: 60 },
       },
     );
-    console.debug(response);
 
     return await response.json();
   } catch (e) {
