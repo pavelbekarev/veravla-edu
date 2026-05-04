@@ -7,7 +7,7 @@ export async function POST(req: Request) {
     return new Response("Unauthorized", { status: 401 });
   }
 
-  revalidateTag("ads");
+  revalidateTag("ads", "default");
 
   console.log("SECRET:", secret);
   console.log("ENV:", process.env.REVALIDATE_SECRET);
