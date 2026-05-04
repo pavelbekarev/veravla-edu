@@ -6,7 +6,7 @@ import { useNotificationState } from "@/shared/lib/store"
 import { AlertCircle } from "lucide-react"
 
 export const ErrorPopup = () => {
-    const notificationStore = useNotificationState()
+    const notificationStore: any = useNotificationState()
 
     return (
         <InfoPopup>
