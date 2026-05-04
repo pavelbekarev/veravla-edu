@@ -3,9 +3,11 @@
 import { useNotificationState } from "./store";
 
 export default function useNotification() {
-  const successMessage = useNotificationState((state) => state.successMessage);
-  const errorMessage = useNotificationState((state) => state.errorMessage);
-  const resetState = useNotificationState();
+  const successMessage = useNotificationState(
+    (state: any) => state.successMessage,
+  );
+  const errorMessage = useNotificationState((state: any) => state.errorMessage);
+  const resetState: any = useNotificationState();
 
   return {
     successMessage,

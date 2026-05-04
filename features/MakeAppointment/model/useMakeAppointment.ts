@@ -12,7 +12,7 @@ export function useMakeAppointment() {
   });
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
-  const notificationStore = useNotificationState();
+  const notificationStore: any = useNotificationState();
 
   const handleMakeAppointment = async (e: any) => {
     e.preventDefault();

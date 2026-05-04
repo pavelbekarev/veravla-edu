@@ -10,7 +10,7 @@ import { CSSTransition } from "react-transition-group";
 export const ShowInfoPopup = () => {
     const { hasSuccess, successMessage, hasError, errorMessage, resetState } = useNotification();
     const nodeRef = useRef(null);
-    const timeoutRef = useRef<any>();
+    const timeoutRef = useRef<any>(null);
     const [show, setShow] = useState<boolean>(false);
 
     const visible = hasSuccess || hasError;
