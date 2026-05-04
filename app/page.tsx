@@ -1,4 +1,7 @@
 import GlideUp from "@/features/GlideUp";
+import { SuccessPopup } from "@/features/InfoPopup";
+import { ShowInfoPopup } from "@/features/ShowInfoPopup";
+import useNotification from "@/shared/lib/useNotification";
 import Advertisement from "@/widgets/Advertisement";
 import AiSection from "@/widgets/AiSection";
 import CourseAuthor from "@/widgets/CourseAuthor";
@@ -25,6 +28,7 @@ export default function Home() {
         <Vacancies />
       </main>
       <Footer />
+      <ShowInfoPopup />
     </div>
   );
 }

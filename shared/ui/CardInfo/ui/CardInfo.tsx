@@ -48,7 +48,10 @@ export const CardInfo = ({ data, children, config }: { data: CardInfoData, child
                         <span className="advertisement__item-date">{ data.date }</span>
                     </div>
             }
-            <Image src={data.img} alt="Картинка объявления" />
+            {
+                data.img && data.img !== "" && 
+                <Image loading="lazy" src={data.img} alt="Картинка объявления" />
+            }
 
             <h3 className="advertisement__item-title">
                 { data.title }

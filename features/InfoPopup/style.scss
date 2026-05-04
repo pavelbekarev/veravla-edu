@@ -1,0 +1,40 @@
+.infoPopup {
+  position: fixed;
+  top: 5%;
+  right: 2%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem 4rem;
+  border: 1px solid #066177;
+  z-index: 99999999999999999999999;
+  border-radius: 2rem;
+  transform: translateX(0);
+  animation: slideIn 0.3s forwards;
+
+  &__text {
+    color: #fff;
+    font-size: 2rem;
+  }
+}
+
+.errorPopup,
+.successPopup {
+  display: flex;
+  flex-flow: row;
+  gap: 2rem;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(calc(100% + 2rem));
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

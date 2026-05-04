@@ -1,3 +1,3 @@
-import { Advertisement } from "./ui/Advertisement";
+import Advertisement from "./ui/Advertisement";
 
 export default Advertisement;

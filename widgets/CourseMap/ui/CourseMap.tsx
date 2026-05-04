@@ -1,12 +1,13 @@
 'use client'
 
-import { useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import "../style.scss";
 import { Course } from "./Course";
 import ShowCourseBar from "@/features/ShowCourseBar";
 import { MakeAppointmentButton, MakeAppointmentForm } from "@/features/MakeAppointment";
 import ModalWrapper from "@/shared/ui/ModalWrapper";
 import { useModal } from "@/shared/lib/useModal";
+import { CSSTransition } from 'react-transition-group';
 
 interface CourseMap {
     step: number;
@@ -216,6 +217,19 @@ export const CourseMap = () => {
     const [activeCourseId, setActiveCourseId] = useState<number>(1);
     const { close, isOpen, open } = useModal();
 
+    const nodeRefs = useRef<{ [key: number]: HTMLElement | null }>({});
+
+    const getNodeRef = useCallback((id: number): any => {
+        if (!nodeRefs.current[id]) {
+            nodeRefs.current[id] = null;
+        }
+        return nodeRefs.current[id];
+    }, []);
+
+    const setNodeRef = useCallback((id: number) => (element: HTMLElement | null) => {
+        nodeRefs.current[id] = element;
+    }, []);
+
     if (courseMap?.length > 0) 
         return (
             <section className="courseMap sectionBackground--toTopPositive">
@@ -230,7 +244,7 @@ export const CourseMap = () => {
                     <div className="courseMap__itemsContent">
                         {
                             courseMap.map((item) => {
-                                const nodeRef = useRef(null);
+                                const isActive = activeCourseId === item.id;
 
                                 return (
                                     <div className="courseMap__course" key={item.id}>
@@ -239,7 +253,19 @@ export const CourseMap = () => {
                                             onClick={() => setActiveCourseId(item.id)}
                                             isActive={activeCourseId === item.id}
                                         />
-                                        {activeCourseId === item.id && <Course data={item.map} /> }
+                                        {activeCourseId === item.id && 
+                                            <CSSTransition
+                                                in={isActive}
+                                                timeout={300}
+                                                classNames="course-fade"
+                                                unmountOnExit
+                                                nodeRef={getNodeRef(item.id)}
+                                            >
+                                                <div ref={setNodeRef(item.id)}>
+                                                    <Course data={item.map} />
+                                                </div>
+                                            </CSSTransition>
+                                        }
                                     </div>
                                 )
                             })

@@ -1,50 +1,40 @@
-'use client';
-
 import "../style.scss";
 import ShowMoreButton from "@/features/ShowMoreButton";
 import { getAds } from "@/entities/Advertisement/api/getAds";
 import { AdvertisementItem } from "./AdvetrisementItem--new";
 import { Advertisement as AdvertisementType} from "@/entities/Advertisement/model/types";
-import { useEffect, useState } from "react";
 import CustomSwiper from "@/shared/ui/CustomSwiper";
+import { AdvertisementWrapper } from "./AdvertisementWrapper";
 
-export const Advertisement = () => {
-    const [ads, setAds] = useState<AdvertisementType[]>([]);
+export default async function Advertisement() {
+    // const [ads, setAds] = useState<AdvertisementType[]>([]);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            const result = await getAds();
-            setAds(result);
-        }
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         const result = await getAds();
+    //         setAds(result);
+    //     }
         
-        fetchData();
-    }, [])
+    //     fetchData();
+    // }, [])
+    const ads: any[] = await getAds();
 
-    const handleClick = () => {
-        console.debug(ads)
+    if (!ads || ads.length === 0) {
+        return (
+            <section className="advertisement sectionBackground--toTopPositive">
+                <div className="container">
+                    <h1>Нет данных</h1>
+                </div>
+            </section>
+        )
     }
-
-    return (
-        <section className="advertisement sectionBackground--toTopPositive">
-            <div className="container">
-                <div className="advertisement__head">
-                    <h2 className="title advertisement__title">
-                        Объявления школы
-                    </h2>
-                    <ShowMoreButton text="Все объявления" onClick={handleClick} extraClasses={['advertisement__showMoreBtn']} />
+    else if (ads.length > 0) {
+        return (
+            <section className="advertisement sectionBackground--toTopPositive">
+                <div className="container">
+                    <AdvertisementWrapper ads={ads} />
                 </div>
-                <div className="advertisement__itemsContent">
-                    <CustomSwiper
-                        swiperConfig={{
-                            slides: ads,
-                            spaceBetween: 0,
-                        }}
-                        renderSlide={(slide, key) => (
-                            <AdvertisementItem key={key} item={slide} />
-                        )}
-                    />
-                </div>
-            </div>
-        </section>
-    )
+            </section>
+        )
+    }
 }
