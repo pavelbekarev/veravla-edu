@@ -7,6 +7,7 @@ export async function getAds() {
 
   try {
     const response = await api.get("wp-json/wp/v2/announcements");
+    console.debug(response);
 
     return response.data;
   } catch (e) {
