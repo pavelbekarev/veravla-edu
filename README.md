@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎓 Veravla Education
 
-## Getting Started
+Современная образовательная платформа, разработанная с использованием **Next.js** и **TypeScript**.
 
-First, run the development server:
+Проект демонстрирует навыки разработки многостраничных приложений, построения компонентной архитектуры и создания адаптивных пользовательских интерфейсов.
+
+> ⚠️ Демонстрационный проект.
+
+---
+
+# 🚀 Demo
+
+https://veravla-edu-phi.vercel.app/
+
+---
+
+# ✨ Возможности
+
+- Современный адаптивный интерфейс
+- Многостраничное приложение на Next.js
+- Компонентная архитектура
+- Каталог образовательных программ
+- Переиспользуемые UI-компоненты
+- Responsive Design
+- TypeScript
+- SEO-friendly структура проекта
+
+---
+
+# 🛠️ Технологии
+
+## Frontend
+
+- Next.js
+- React
+- TypeScript
+- SCSS
+- ESLint
+
+---
+
+# 📂 Архитектура
+
+<img width="254" height="290" alt="image" src="https://github.com/user-attachments/assets/91c35d1b-02ce-4154-a53f-b9c0904cd19a" />
+
+Основной акцент сделан на разделении интерфейса на небольшие переиспользуемые компоненты и поддержании чистой структуры проекта.
+
+---
+
+# 💡 Что было реализовано
+
+- разработка пользовательского интерфейса;
+- адаптивная верстка;
+- построение компонентной архитектуры;
+- организация структуры проекта;
+- типизация приложения с использованием TypeScript.
+
+---
+
+# 🎯 Цели проекта
+
+Во время разработки основной акцент был сделан на:
+
+- практике разработки на Next.js;
+- построении масштабируемой структуры проекта;
+- разработке переиспользуемых компонентов;
+- адаптивной верстке;
+- улучшении навыков работы с TypeScript.
+
+---
+
+# 🚀 Запуск проекта
 
 ```bash
+npm install
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# 📌 Возможные улучшения
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- авторизация пользователей;
+- личный кабинет;
+- фильтрация и поиск курсов;
+- интеграция с backend API;
+- Storybook;
+- unit-тесты;
+- e2e-тестирование;
+- CI/CD.
